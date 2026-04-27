@@ -9,9 +9,9 @@ st.set_page_config(page_title="Bike Sharing Dashboard", layout="wide")
 # Fungsi untuk memuat data
 @st.cache_data
 def load_data():
-    day_df = pd.read_csv("df_day_clean.csv")
-    hour_df = pd.read_csv("df_hour_clean.csv")
-    
+    day_df = pd.read_csv("Dashboard/df_day_clean.csv")
+    hour_df = pd.read_csv("Dashboard/df_hour_clean.csv")
+
     # Memastikan format tanggal
     day_df["dteday"] = pd.to_datetime(day_df["dteday"])
     hour_df["dteday"] = pd.to_datetime(hour_df["dteday"])
